@@ -1,4 +1,4 @@
-ID,Name,Date,Time,Event,Status,Latitude,Longitude,Maximum Wind
+ID,Name,Date,Time,Event,Status,Latitude,Longitude,MaximumWind
 AL011950,               ABLE,19500812,0,  , TS,17.1N,55.5W,35
 AL011950,               ABLE,19500812,600,  , TS,17.7N,56.3W,40
 AL011950,               ABLE,19500812,1200,  , TS,18.2N,57.4W,45
