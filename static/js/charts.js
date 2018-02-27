@@ -57,7 +57,7 @@ function getCategory(windspeed){
 
 
 function show_bar_chart(ndx) {
-    let name_dim=ndx.dimension(function(d){
+    let Year_dim=ndx.dimension(function(d){
     if (d.Year>=2010){
         return "2010-2015"
     }else{
@@ -71,7 +71,7 @@ function show_bar_chart(ndx) {
     ids_found = []
     ids_found_other=[]
 
-    let count_reduce = name_dim.group().reduceSum(function(d){
+    let count_reduce = Year_dim.group().reduceSum(function(d){
         // If this ID is not already found return 1 else return 0 
         if(ids_found.indexOf(d.ID)==-1){
             ids_found.push(d.ID);
@@ -96,7 +96,7 @@ function show_bar_chart(ndx) {
         .width(800)
         .height(500)
         .margins({top:10,right:50,bottom:30,left:50})
-        .dimension(name_dim)
+        .dimension(Year_dim)
         .group(count_reduce)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
@@ -115,6 +115,14 @@ function show_select_category(ndx){
         // console.log(max)
         return getCategory(max);
     })
+    
+    // let cat_group=cat_dim.group(function(d){
+    //     if (d.ID=='AL011950')
+    //         return d
+    //     else
+    //         return 0
+    //})
+    
 
     dc.selectMenu('#select-category')
         .dimension(cat_dim)
