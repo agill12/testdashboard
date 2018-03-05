@@ -1,0 +1,23 @@
+ if(Years.indexOf(d.Year)==-1){
+        Years.push(d.Year);
+    }
+    return d.Year;
+    
+    
+    
+    
+    (function(d){
+ 
+  ids_found_other.push(d.ID)
+  for (i=0;i<ids_found_other.length;i++){
+      if (ids_found_other[i]==ids_found_other[i+1]){
+          maxwind.push[d['Maximum Wind']]
+      }else{
+          maxreject.push[d['Maximum Wind']]
+      }
+      
+  }
+ 
+    
+       return 1
+})

@@ -4,8 +4,8 @@ with open('data/newatlantic.csv','r') as fin,open('data/newatlantic2.csv','w') a
     hurricanes=csv.reader(fin,delimiter=',')
     ids_found=[]
     
-    # for row in hurricanes:
-    #     print(row)
+    for row in hurricanes:
+     writer.writerow(row[0:9])
         
        
 def getcategory(windspeed):
@@ -23,8 +23,8 @@ def getcategory(windspeed):
         return 1
     else:
         return 0
-for row in hurricanes:
-    print(getcategory(row[9]))
+
+    
    
        
        
